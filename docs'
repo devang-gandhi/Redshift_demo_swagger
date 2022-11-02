@@ -1,0 +1,16 @@
+create table users.public.t_users(  id integer not null,
+  first_name varchar not null,
+  last_name varchar not null,
+  email text not null,
+  password text not null,
+  phone varchar not null,
+  role varchar not null,
+  created_at NOT NULL DEFAULT SYSDATETIME(),
+  primary key(id)
+);
+
+insert into t_users(id, first_name, last_name, email, password, phone, role) values(1,'ABC', 'abc', 'abc', 'abc123', '1234567890', 'headadmin');
+
+DROP TABLE users.public.t_users
+
+UPDATE t_users set role = '', password = '' WHERE email = ''
